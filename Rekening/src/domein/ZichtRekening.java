@@ -1,7 +1,7 @@
 package domein;
 
 public class ZichtRekening extends Rekening {
-    // extra attribuut
+
     private double maxKredietOnderNul;
 
     public ZichtRekening
@@ -10,7 +10,6 @@ public class ZichtRekening extends Rekening {
         setMaxKredietOnderNul(maxKredietOnderNul);
     }
 
-    // getter en setter voor attribuut
     public double getMaxKredietOnderNul() {
         return maxKredietOnderNul;
     }
@@ -22,7 +21,6 @@ public class ZichtRekening extends Rekening {
         this.maxKredietOnderNul = maxKredietOnderNul;
     }
 
-    // extra (overridden) methodes
     @Override
     public boolean haalAf(double bedrag) {
         double saldo = getSaldo();
@@ -40,5 +38,10 @@ public class ZichtRekening extends Rekening {
     public String toString() {
         return String.format("%s. Max krediet onder nul = %.2f",
                 super.toString(), maxKredietOnderNul);
+    }
+
+    @Override
+    public double geefJaarlijkseKost() {
+        return Math.abs(maxKredietOnderNul / 100);
     }
 }

@@ -1,14 +1,12 @@
 package domein;
 
 public class SpaarRekening extends Rekening {
-    // extra attribuut
     private static double aangroeiIntrest;
 
     public SpaarRekening(long rekeningNr, String houder) {
         super(rekeningNr, houder);
     }
 
-    // getter en setter voor attribuut
     public static double getAangroeiIntrest() {
         return aangroeiIntrest;
     }
@@ -19,7 +17,6 @@ public class SpaarRekening extends Rekening {
         SpaarRekening.aangroeiIntrest = aangroeiIntrest;
     }
 
-    // extra (overriden) methodes
     @Override
     public boolean haalAf(double bedrag) {
         double saldo = /*super.*/getSaldo();
@@ -37,5 +34,10 @@ public class SpaarRekening extends Rekening {
     @Override
     public String toString() {
         return String.format("%s. Aangroeiintrest = %.2f%%", super.toString(), aangroeiIntrest);
+    }
+
+    @Override
+    public double geefJaarlijkseKost() {
+        return getSaldo() < 300 ? (300 - getSaldo()) / 20 : 0;
     }
 }
