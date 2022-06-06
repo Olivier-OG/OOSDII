@@ -1,0 +1,5 @@
+Janssens                     appels      50     38.00
+Peeters                       peren       5      7.50
+Gunter                         kiwi     100     95.00
+Klaas                       citroen      10     20.00
+Pjotr                     speculoos      30     19.00

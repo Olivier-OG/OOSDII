@@ -2,6 +2,7 @@ package domein;
 
 import persistentie.BeheerskostenMapper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class KostenRepository {
@@ -17,5 +18,13 @@ public class KostenRepository {
 
     public List<Beheerskost> getKosten() {
         return kosten;
+    }
+
+    public List<Rekening> getRekeningen() {
+        List<Rekening> rekeningen = new ArrayList<>();
+        for (Beheerskost kost : kosten)
+            if (kost instanceof Rekening rekening)
+                rekeningen.add(rekening);
+        return rekeningen;
     }
 }

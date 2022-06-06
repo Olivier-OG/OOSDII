@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Bestanden1/Bestanden1.iml" filepath="$PROJECT_DIR$/Bestanden1/Bestanden1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bestanden2/Bestanden2.iml" filepath="$PROJECT_DIR$/Bestanden2/Bestanden2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Coderen/Coderen.iml" filepath="$PROJECT_DIR$/Coderen/Coderen.iml" />
       <module fileurl="file://$PROJECT_DIR$/Container/Container.iml" filepath="$PROJECT_DIR$/Container/Container.iml" />
       <module fileurl="file://$PROJECT_DIR$/Film/Film.iml" filepath="$PROJECT_DIR$/Film/Film.iml" />
       <module fileurl="file://$PROJECT_DIR$/Garage/Garage.iml" filepath="$PROJECT_DIR$/Garage/Garage.iml" />
       <module fileurl="file://$PROJECT_DIR$/Movie/Movie.iml" filepath="$PROJECT_DIR$/Movie/Movie.iml" />
       <module fileurl="file://$PROJECT_DIR$/Rekening/Rekening.iml" filepath="$PROJECT_DIR$/Rekening/Rekening.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stripfiguren/Stripfiguren.iml" filepath="$PROJECT_DIR$/Stripfiguren/Stripfiguren.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tuin/Tuin.iml" filepath="$PROJECT_DIR$/Tuin/Tuin.iml" />
       <module fileurl="file://$PROJECT_DIR$/Verplaatsing/Verplaatsing.iml" filepath="$PROJECT_DIR$/Verplaatsing/Verplaatsing.iml" />
       <module fileurl="file://$PROJECT_DIR$/Voorwerp/Voorwerp.iml" filepath="$PROJECT_DIR$/Voorwerp/Voorwerp.iml" />
