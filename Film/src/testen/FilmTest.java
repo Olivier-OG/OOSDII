@@ -25,7 +25,7 @@ class FilmTest {
 
     @ParameterizedTest
     @NullAndEmptySource
-    @ValueSource(strings = {" ", "         ", "\t\t", "\n" })
+    @ValueSource(strings = {" ", "         ", "\t\t", "\n"})
     void maakFilm_legeNaam_exception(String naam) {
         Assertions.assertThrows(IllegalArgumentException.class, () -> new Film(naam, 2018, 3));
     }

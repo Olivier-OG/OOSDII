@@ -2,13 +2,13 @@
 package startup;
 
 import domein.DomeinController;
-import ui.FilmApplicatie;
+import ui.VertoonbaarApplicatie;
 
 public class StartUp {
     public static void main(String[] args) {
         
     	DomeinController dc = new DomeinController();
-    	FilmApplicatie app = new FilmApplicatie(dc);
+    	VertoonbaarApplicatie app = new VertoonbaarApplicatie(dc);
     	app.start();
     }
 }

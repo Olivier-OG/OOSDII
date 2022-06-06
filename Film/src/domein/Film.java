@@ -4,7 +4,7 @@ package domein;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Film {
+public class Film implements Vertoonbaar {
 
     public final static int MIN_JAAR = 1900, HUIDIG_JAAR = LocalDate.now().getYear();
     public final static int MIN_STERREN = 0, MAX_STERREN = 5;
@@ -64,6 +64,11 @@ public class Film {
         if (sterren > MAX_STERREN || sterren < MIN_STERREN)
             throw new IllegalArgumentException(String.format("Sterren moet in het interval [%d, %d] liggen", MIN_STERREN, MAX_STERREN));
         this.sterren = sterren;
+    }
+
+    @Override
+    public int wordtVertoondInZaal() {
+        return sterren > 3 ? 1 : sterren < 3 ? 3 : 2;
     }
 }
 
