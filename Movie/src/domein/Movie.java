@@ -13,7 +13,10 @@ public class Movie implements Comparable<Movie> {
         setYear(yr);
     }
 
-    // Getter & setter methods for accessing private data
+    public static int compareRating(Movie m1, Movie m2) {
+        return m1.compareTo(m2);
+    }
+
     public double getRating() {
         return rating;
     }

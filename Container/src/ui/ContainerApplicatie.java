@@ -1,12 +1,11 @@
 package ui;
 
 import domein.Container;
-import domein.ContainerEigenaarCompare;
-import domein.ContainerMassaCompare;
 import domein.ContainerVolumeEnEigenaarCompare;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ContainerApplicatie {
@@ -28,7 +27,12 @@ public class ContainerApplicatie {
         }
 
         System.out.printf("%nContainers bij sorteren op massa: %n");
-        containers.sort(new ContainerMassaCompare());
+        containers.sort(new Comparator<Container>() {
+            @Override
+            public int compare(Container o1, Container o2) {
+                return Integer.compare(o1.getMassa(), o2.getMassa());
+            }
+        });
         for (Container container : containers) {
             System.out.printf("%dkg - %s - %dm³%n",
                     container.getMassa(),
@@ -37,7 +41,7 @@ public class ContainerApplicatie {
         }
 
         System.out.printf("%nContainers bij sorteren op eigenaar: %n");
-        containers.sort(new ContainerEigenaarCompare());
+        containers.sort(((o1, o2) -> o1.getEigenaar().compareTo(o2.getEigenaar())));
         for (Container container : containers) {
             System.out.printf("%s - %dm³ - %dkg%n",
                     container.getEigenaar(),
@@ -67,5 +71,16 @@ public class ContainerApplicatie {
                         "Fout: De container was reeds aanwezig in de lijst."
                         :
                         "De container is toegevoegd aan de lijst.");
+
+        System.out.printf("%nContainers bij sorteren op serienummer: %n");
+        containers.sort(Comparator.comparing(Container::getSerialNumber).reversed());
+        for (Container container : containers) {
+            System.out.printf("%s - %s - %dm³ - %dkg%n",
+                    container.getSerialNumber(),
+                    container.getEigenaar(),
+                    container.getVolume(),
+                    container.getMassa());
+        }
+
     }
 }
